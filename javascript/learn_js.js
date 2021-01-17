@@ -1,4 +1,13 @@
-"use strict";
+/*
+LEARNING JAVA SCRIPT
+
+lessoon from freecodecamp.org
+url: https://youtu.be/PkZNo7MFNFg
+coded on codepen.io
+*/
+
+
+"use strict"; // sets compiuler to strictly check for incorrect/bad code
 
 console.log('Beginning Javascript self-study'); // in-line comment, console.log in JS == print() in python
 /* 
@@ -19,7 +28,7 @@ var donald; // unlike python, even if I don't assign a var I must declare it id 
 console.log(poggers.length); // find length of string with just the length attribute of a string
 
 var astring = "boom boom";
-astring[0] = 'c'; // results in error
+//astring[0] = 'c'; // results in error
 console.log(astring); // strings are immutable in JS unlike Python, cannot change an indivudual character, need to alter the whole string again
 astring = 'coom boom';
 console.log(astring);
@@ -125,5 +134,71 @@ console.log(arr);
 console.log(5 * parseInt("6")); // convert string to integer using parseInt
 
 
+// try - catch in JS == try - except in python
+try{
+  console.log("can do this");
+} catch ( ex ){
+  console.log(ex);
+}
+
+// to prevent object from mutation, use: Object.freeze(object_name);
 
 
+// Anonymous functions
+var anon = (arg1) => arg1 * 2;
+console.log (anon(2));
+
+// concatenate one array on another
+var conc = (a1, a2) => a1.concat(a2);// use array.concat()
+console.log (conc([0,1],[2,3]));
+
+
+
+/* Map, Filter*/
+arr = [1,-1,2,-2,3.5,-6.7,9.6];
+
+// Filter and Map
+// Filter elements in an array based on a condition
+// Map elements to new value based on a calculation
+console.log(arr.filter(element => Number.isInteger(element) && element > 0 ).map(element => element * element));
+
+
+// Use spread operator to copy contents of one array to another
+var arr2 = [...arr];
+arr = []
+console.log(arr)
+console.log(arr2)
+
+/*
+  Template Listerals: https://youtu.be/PkZNo7MFNFg?t=11200
+  At 3:10:15, instructor explains how to print html code dynamically using the output of JS scripts
+  This is fundamentally important for development (I believe)
+*/
+
+// Instantiate a new object given an object constructor function using new
+// If we are using class then simply declare the function as 'constructor'
+
+class admin{
+  constructor(name){
+    this.name = name + ' administration';
+  }
+  get admin_name() {
+    return this.name;
+  }
+  get admin_date() {
+    return this.date;
+  }
+  set admin_date(date){
+    this.data = date;
+  }
+}
+console.log(new admin('Biden'));
+
+var new_admin = new admin('Cortez');
+console.log(new_admin.admin_name);
+new_admin.date = 2024;
+console.log(new_admin.date);
+
+/*
+  import, export, require: https://youtu.be/PkZNo7MFNFg?t=12026
+*/
