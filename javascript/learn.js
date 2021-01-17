@@ -1,7 +1,7 @@
 /*
 LEARNING JAVA SCRIPT
 
-lessoon from freecodecamp.org
+lessoon (lol garlic) from freecodecamp.org
 url: https://youtu.be/PkZNo7MFNFg
 coded on codepen.io
 */
