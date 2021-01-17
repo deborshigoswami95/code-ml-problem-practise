@@ -7,7 +7,7 @@ coded on codepen.io
 */
 
 
-"use strict"; // sets compiuler to strictly check for incorrect/bad code
+"use strict"; // sets compiler to strictly check for incorrect/bad code
 
 console.log('Beginning Javascript self-study'); // in-line comment, console.log in JS == print() in python
 /* 
