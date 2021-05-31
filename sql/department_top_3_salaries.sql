@@ -1,4 +1,6 @@
 # Problem: https://leetcode.com/problems/department-top-three-salaries/
+# Solution is very slow, how to optimize?
+
 with top3_sal as (
     select
     sal.Salary,
