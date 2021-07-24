@@ -21,4 +21,4 @@ class naive_Solution:
         s2 = self.get_single_occurence_words(s2)
         
         
-        return list(((s1-s2).union(s2-s1)) - all_common_words
+        return list(((s1-s2).union(s2-s1)) - all_common_words)
