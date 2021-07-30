@@ -73,7 +73,7 @@ class LRUCache:
             self.cache.pop(current_last.key)
             
 
-        # else put at head
+        # else decrement capacity by 1 and put at head
         else:
             
             self.capacity-=1
