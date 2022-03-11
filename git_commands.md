@@ -4,5 +4,5 @@ git add .
 git commit -m "update message"
 git push <remote> <branch_name>
 ```
-<remote> is usually origin
+remote is usually origin
 
