@@ -6,6 +6,7 @@
 |----|-----------|----|---------|-----|
 |2024-11-02|[What Are the Odds? Language Models Are Capable of Probabilistic Reasoning](#what-are-the-odds?-language-models-are-capable-of-probabilistic-reasoning)|https://arxiv.org/pdf/2406.12830|Yes||
 |2024-11-03|Personalized Audiobook Recommendations at Spotify Through Graph Neural Networks|https://arxiv.org/pdf/2403.05185|||
+|2024-11-04|Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations|https://storage.googleapis.com/gweb-research2023-media/pubtools/5716.pdf|||
 
 
 ## Summaries
