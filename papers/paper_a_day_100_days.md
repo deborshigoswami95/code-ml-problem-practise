@@ -4,7 +4,7 @@
 
 |Date|Paper Title|Link|Completed|Notes|
 |----|-----------|----|---------|-----|
-|2024-11-02|What Are the Odds? Language Models Are Capable of Probabilistic Reasoning|https://arxiv.org/pdf/2406.12830|Yes||
+|2024-11-02|[What Are the Odds? Language Models Are Capable of Probabilistic Reasoning](#what-are-the-odds?-language-models-are-capable-of-probabilistic-reasoning)|https://arxiv.org/pdf/2406.12830|Yes||
 
 
 ## Summaries
