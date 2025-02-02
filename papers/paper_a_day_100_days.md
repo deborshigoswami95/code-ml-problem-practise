@@ -6,7 +6,8 @@
 |-----|----|-----------|----|---------|-----|
 |1|2024-11-02|[What Are the Odds? Language Models Are Capable of Probabilistic Reasoning](#what-are-the-odds?-language-models-are-capable-of-probabilistic-reasoning)|https://arxiv.org/pdf/2406.12830|Yes||
 |2|2024-11-03|[Personalized Audiobook Recommendations at Spotify Through Graph Neural Networks](#personalized-audiobook-recommendations-at-spotify-through-graph-neural-networks)|https://arxiv.org/pdf/2403.05185|Yes|Partial understanding, Revisit|
-|3|2024-11-04|Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations|https://storage.googleapis.com/gweb-research2023-media/pubtools/5716.pdf|||
+|3|2024-11-04|[Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations](#sampling-bias-corrected-neural-modeling-for-large-corpus-item-recommendations)|https://storage.googleapis.com/gweb-research2023-media/pubtools/5716.pdf|||
+|4|2025-02-01|[Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations](#mixed-negative-sampling-for-learning-two-tower-neural-networks-in-recommendations)|https://storage.googleapis.com/gweb-research2023-media/pubtools/6090.pdf|Yes||
 
 
 ## Summaries
@@ -44,4 +45,26 @@ LLMs can make statistical inferences ( like estimating percentiles, or probabili
 
 ### Personalized Audiobook Recommendations at Spotify Through Graph Neural Networks
 
+---------------------------------
+
+### Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations
+
+---------------------------------
+
+### Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
+[Link](https://storage.googleapis.com/gweb-research2023-media/pubtools/6090.pdf)
+
+**Key Idea**<br>
+Two-tower recommender systems require the sampling of query-negative pairs for model training. In the past (<2020), this was done with batch negative sampling. This paper argues that batch negative sampling causes model to not learn effective representations of long-tail or sparsely selected items. They introduce a new method called MNS ( Mixed negative sampling ) to correct this bias.
+
+**Summary**
+- Batch Negative Sampling
+  - Great way effeciently sample query-negative pairs within the same training batch - simply assign every item other than positive sample in the batch as a negative sample.
+  - However this means sampling is according to unigram distribution of items, i.e. items clicked frequently will appear more often in training batch and be assigned as negative sample for some query. items never clicked will never be sampled as negatives. model never learns represenations for long tail items.
+- Mixed Negative Sampling
+  - Combine batch sampling (per unigram distribution) with sampling from the rest of the corpus according some distribution Q^. Q^ can be anything from uniform distribution to inverse unigram (sampling long tail items more often).
+  - Experiments show clearly better results.
+
+**Discussion**
+- Paper mentions how the two tower model with MNS effectively solves item cold start but it is quite flimsy on the proof. Intuitively makes sense but a little bit more dep-th on the actual cold start scenario in terms of training and inference would be helpful.
 
